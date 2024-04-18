@@ -1,19 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Bertel, Charted, Sapiens, bankEng } from '../assets';
-import SectionHeader from "./SectionHeader";
-
-
+import SectionHeader from './SectionHeader';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
 
 const data = [
   {
@@ -37,54 +31,46 @@ const data = [
     position: "Digital Transformation Lead",
     company: "Bank of England",
   },
- ];
+];
 
- const Sapien = () => {
+const Sapien = () => {
   return (
     <div className="absolute top-[5rem] right-[3rem] w-full h-full pointer-events-none">
       <img
         className="absolute top-1/2 left-16 lg:left-36 w-[30.5625rem] h-[70.5625rem] -translate-x-1/2 -translate-y-1/2 text-white"
         src={Sapiens}
-        />
+        alt="Sapiens"
+      />
     </div>
   );
 };
 
-
- const Trial = () => {
-
-
+const Trial = () => {
   return (
-
-    <div className="bg-n-8/10 border-t-2 rounded-t-3xl mt-10 py-10" >
-  <section className=" relative padding-x max-width mx-auto w-full px-10  ">
-
-    <SectionHeader
-    title="Why Customers Love Squirro"
-    />
-    <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 6500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper absolute top-3"
+    <div className="bg-n-8/10 border-t-2 rounded-t-3xl mt-10 py-10">
+      <section className="relative padding-x max-width mx-auto w-full px-10">
+        <SectionHeader title="Why Customers Love Squirro" />
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 6500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          className="mySwiper absolute top-3"
         >
           {data.map((item, index) => (
-            <SwiperSlide key={index} className='mb-10 items-center justify-center mx-auto'>
+            <SwiperSlide key={index} className="mb-10 items-center justify-center mx-auto">
               <div className="border p-7 rounded-xl bg-white drop-shadow-md mx-auto lg:w-[70%] border-neutral-800/50 flex flex-col gap-y-6 justify-between">
                 <div className="flex flex-col gap-y-3.5">
                   <p className="font-bold text-lg text-n-8">{item.company}</p>
                   <p className="font-medium text-xs text-n-8 mt-3">
                     <span>
-                      <svg height="20px" className="mb-2" fill="n-8" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xml:space="preserve">
+                      <svg height="20px" className="mb-2" fill="n-8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" xmlSpace="preserve">
                         <g>
                           <g id="right_x5F_quote">
                             <g>
@@ -99,7 +85,7 @@ const data = [
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <div className='border-1 border opacity-50 mb-4 w-full border-n-8' />
+                  <div className="border-1 border opacity-50 mb-4 w-full border-n-8" />
                   <img src={item.image} alt={item.name} className="h-18 w-20" />
                   <p className="pt-2 text-xs font-semibold text-n-8">{item.name}</p>
                   <p className="text-xs font-medium text-n-8">{item.position}</p>
@@ -108,10 +94,9 @@ const data = [
             </SwiperSlide>
           ))}
         </Swiper>
-          <Sapien />
-  </section>
-</div>
-
+        <Sapien />
+      </section>
+    </div>
   );
 };
 

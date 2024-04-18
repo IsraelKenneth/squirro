@@ -24,7 +24,7 @@ const Card3 = ({title, description, buttonhit, image}) =>{
         className=" relative flex   "
         >
   <div className="bg-[#f2f2f8] w-[22rem]  lg:w-[20rem] border-gray-300 border relative drop-shadow-lg hover:shadow-xl transition duration-500 rounded-lg">
-    <img className="rounded-t-lg hover:scale-90 transition duration-500 ease-out" src={image} alt="hey" />
+    <img className="rounded-t-lg hover:scale-95 transition duration-500 ease-out" src={image} alt="hey" />
     <div className="py-6 px-8 rounded-lg bg-white">
       <h1 className="text-gray-700 font-bold text-md mb-3 hover:text-gray-900 cursor-pointer">{title}</h1>
       <p className="text-gray-700 tracking-wide text-xs">{description}</p>
