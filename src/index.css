@@ -1,0 +1,146 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+
+}
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color-scheme: dark;
+}
+
+
+
+@layer base {
+  body {
+    @apply  bg-white text-n-8 text-base;
+  }
+}
+
+
+
+.h1 {
+  @apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem];
+}
+
+.h2 {
+  @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+}
+
+.h3 {
+  @apply text-[2rem] leading-normal md:text-[2.5rem];
+}
+
+.h4 {
+  @apply text-[2rem] leading-normal;
+}
+
+.h5 {
+  @apply text-2xl leading-normal;
+}
+
+.h6 {
+  @apply font-semibold text-lg leading-8;
+}
+
+
+@layer utilities {
+
+  .max-width{
+    @apply max-w-screen-xl mx-auto;
+  }
+  .padding {
+    @apply sm:px-16 px-8 sm:py-28 py-10;
+  }
+
+  .padding-x {
+    @apply sm:px-16 px-8;
+  }
+
+  .margin-x {
+    @apply sm:mx-16 mx-8 ;
+  }
+  .padding-y {
+    @apply sm:py-24 py-12;
+  }
+
+  .margin-y {
+    @apply sm:mt-8 mt-16 sm:mb-3 mb-5;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+}
+
+
+.gradient1 {
+  background: rgb(209,148,41);
+  background: -moz-linear-gradient(18deg, rgba(209,148,41,1) 0%, rgba(237,197,127,1) 64%, rgba(222,169,76,0.6811099439775911) 99%);
+  background: -webkit-linear-gradient(18deg, rgba(209,148,41,1) 0%, rgba(237,197,127,1) 64%, rgba(222,169,76,0.6811099439775911) 99%);
+  background: linear-gradient(18deg, rgba(209,148,41,1) 0%, rgba(237,197,127,1) 64%, rgba(222,169,76,0.6811099439775911) 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d19429",endColorstr="#dea94c",GradientType=1);
+}
+
+
+.gradient2{
+  background: rgb(209,148,41);
+  background: -moz-linear-gradient(18deg, rgba(209,148,41,1) 0%, rgba(62,15,214,1) 64%, rgba(14,7,37,1) 99%);
+  background: -webkit-linear-gradient(18deg, rgba(209,148,41,1) 0%, rgba(62,15,214,1) 64%, rgba(14,7,37,1) 99%);
+  background: linear-gradient(18deg, rgba(209,148,41,1) 0%, rgba(62,15,214,1) 64%, rgba(14,7,37,1) 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d19429",endColorstr="#0e0725",GradientType=1);
+}
+
+
+.form-container {
+  width: 400px;
+  background: linear-gradient(#ffffff, #eeeeee) padding-box,
+              linear-gradient(145deg, transparent 35%,#ffd91c, #a99bf7) border-box;
+  border: 2px solid transparent;
+  background-size: 200% 100%;
+  animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
