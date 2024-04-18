@@ -52,3 +52,7 @@ dist/: Contains the built files for production.
 Feel free to customize and extend the Squirro project according to your requirements. You can modify styles, add new components, or integrate additional libraries as needed.
 
 With the Squirro project, you have a solid foundation for building modern and responsive web applications. Explore the codebase, experiment with different features, and unleash your creativity to create amazing web experiences!
+
+
+
+
