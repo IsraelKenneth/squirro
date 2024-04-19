@@ -43,7 +43,7 @@ const Card3 = ({title, description, buttonhit, image}) =>{
 
 const DiscoverMore = () => {
   return (
-    <section className=' padding'>
+    <section className=' padding max-width'>
        <SectionHeader
    title="Discover More from Squirro"
    brief="Browse our library of insightful resources, guides, and case studies and discover how Squirro can empower your organization and your teams."

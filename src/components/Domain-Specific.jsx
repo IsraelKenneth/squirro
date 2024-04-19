@@ -25,7 +25,10 @@ export const ProjectCard = ({
           >
             <div className="flex items-center flex-none px-4 bg-orange-400 rounded-b-none h-11 rounded-xl">
               <div className="flex space-x-1.5">
-                <p className="w-full h-full"> {description} <span><Link className="underline" href={link}>Learn More</Link></span></p>
+              <p className="w-full h-full text-xs flex flex-row items-center"> 
+              <span className="sm:flex flex-1 hidden">{description}</span> 
+              <span className="ml-2"><Link className="underline" href={link}>Learn More</Link></span>
+              </p>
               </div>
             </div>
             <video
@@ -86,7 +89,7 @@ const DomainSpecific = () => {
           title="Domain-Specific Insights Solutions"
           />
 
-          <div className="hidden lg:grid grid-flow-col text-center text-gray-500 bg-gray-300 rounded-full p-1 mt-10 w-[70%] ">
+          <div className="hidden lg:grid grid-flow-col text-center text-gray-500 bg-gray-300 rounded-full p-1 mt-10 w-[80%] ">
                 <button
                     className={`flex justify-center font-medium py-4 uppercase ${activeTab === 1 ? "bg-white rounded-full shadow text-indigo-900 py-4" : " text-black"}`}
                     onClick={() => handleTabClick(1)}
